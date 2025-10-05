@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/animations.css">  
     <link rel="stylesheet" href="css/main.css">  
     <link rel="stylesheet" href="css/login.css">
+      <link href="assets/images/favicon/favicon.png" rel="icon">
         
     <title>Login</title>
 
@@ -25,7 +26,8 @@
     $_SESSION["usertype"]="";
     
     // Set the new timezone
-    date_default_timezone_set('Asia/Kolkata');
+    date_default_timezone_set('Africa/Lagos');
+
     $date = date('Y-m-d');
 
     $_SESSION["date"]=$date;

@@ -1,0 +1,210 @@
+/* Doctor Dashboard Specific Styles */
+@import url('font-inter.css');
+
+:root {
+  --primarycolor: #3498db;
+  --primarycolorhover: #2980b9;
+  --btnice: #ebf3fd;
+  --btnnicetext: #3498db;
+  --accentcolor: #e74c3c;
+  --successcolor: #27ae60;
+  --warningcolor: #f39c12;
+  --bgcolor: #f8f9fa;
+}
+
+.doctor-container {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+}
+
+.doctor-menu {
+  background: rgba(52, 152, 219, 0.95);
+  border-right: 3px solid #27ae60;
+  backdrop-filter: blur(10px);
+}
+
+.doctor-profile-container {
+  background: rgba(39, 174, 96, 0.1);
+  border-bottom: 2px solid #27ae60;
+}
+
+.doctor-profile-title {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.doctor-profile-subtitle {
+  color: #7f8c8d;
+}
+
+.doctor-menu-btn {
+  color: #2c3e50;
+  background-position: 30% 50%;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.doctor-menu-btn:hover {
+  background-color: rgba(39, 174, 96, 0.2);
+  color: #27ae60;
+  border-left-color: #27ae60;
+  transform: translateX(5px);
+}
+
+.doctor-menu-active {
+  color: #27ae60;
+  border-left: 4px solid #27ae60;
+  background-color: rgba(39, 174, 96, 0.15);
+}
+
+.doctor-dash-body {
+  background: white;
+}
+
+.doctor-nav-bar {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.doctor-dashboard-items {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 2px solid #3498db;
+  border-radius: 12px;
+  color: #2c3e50;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doctor-dashboard-items:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.15);
+}
+
+.doctor-h1-dashboard {
+  font-size: 30px;
+  font-weight: 700;
+  color: #3498db;
+  margin: 0;
+  padding: 0;
+}
+
+.doctor-h3-dashboard {
+  font-size: 18px;
+  font-weight: 500;
+  color: #7f8c8d;
+  margin: 0;
+  padding: 0;
+}
+
+.doctor-dashboard-icons {
+  background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+  color: white;
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin-left: 50px;
+  margin-right: 0px;
+  box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+}
+
+.doctor-table-header {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.doctor-filter-container {
+  background: white;
+  border: 2px solid #3498db;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.1);
+}
+
+.doctor-sub-table {
+  border: 2px solid #3498db;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.doctor-table-headin {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px;
+  border-bottom: 3px solid #27ae60;
+}
+
+.doctor-btn-primary {
+  background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+}
+
+.doctor-btn-primary:hover {
+  background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+}
+
+.  -search {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  border-radius: 25px;
+  padding: 10px 20px;
+}
+
+.  -search::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.doctor-logout-btn {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.doctor-logout-btn:hover {
+  background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
+  transform: translateY(-2px);
+}
+
+.doctor-welcome-header {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.doctor-welcome-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.doctor-welcome-subtitle {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}

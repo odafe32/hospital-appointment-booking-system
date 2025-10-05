@@ -1,0 +1,189 @@
+/* Admin Dashboard Specific Styles */
+@import url('font-inter.css');
+
+:root {
+  --primarycolor: #2c3e50;
+  --primarycolorhover: #34495e;
+  --btnice: #ecf0f1;
+  --btnnicetext: #2c3e50;
+  --accentcolor: #e74c3c;
+  --successcolor: #27ae60;
+  --warningcolor: #f39c12;
+  --bgcolor: #f8f9fa;
+}
+
+.admin-container {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  min-height: 100vh;
+}
+
+.admin-menu {
+  background: rgba(44, 62, 80, 0.95);
+  border-right: 3px solid #e74c3c;
+  backdrop-filter: blur(10px);
+}
+
+.admin-profile-container {
+  background: rgba(231, 76, 60, 0.1);
+  border-bottom: 2px solid #e74c3c;
+}
+
+.admin-profile-title {
+  color: #ecf0f1;
+  font-weight: 600;
+}
+
+.admin-profile-subtitle {
+  color: #bdc3c7;
+}
+
+.admin-menu-btn {
+  color: #ecf0f1;
+  background-position: 30% 50%;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.admin-menu-btn:hover {
+  background-color: rgba(231, 76, 60, 0.2);
+  color: #e74c3c;
+  border-left-color: #e74c3c;
+  transform: translateX(5px);
+}
+
+.admin-menu-active {
+  color: #e74c3c;
+  border-left: 4px solid #e74c3c;
+  background-color: rgba(231, 76, 60, 0.15);
+}
+
+.admin-dash-body {
+  background: #f8f9fa;
+}
+
+.admin-nav-bar {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.admin-dashboard-items {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 2px solid #e74c3c;
+  border-radius: 12px;
+  color: #2c3e50;
+  box-shadow: 0 4px 15px rgba(44, 62, 80, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admin-dashboard-items:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(44, 62, 80, 0.15);
+}
+
+.admin-h1-dashboard {
+  font-size: 30px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-h3-dashboard {
+  font-size: 18px;
+  font-weight: 500;
+  color: #7f8c8d;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-dashboard-icons {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  color: white;
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin-left: 50px;
+  margin-right: 0px;
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.admin-table-header {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.admin-filter-container {
+  background: white;
+  border: 2px solid #e74c3c;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(44, 62, 80, 0.1);
+}
+
+.admin-sub-table {
+  border: 2px solid #e74c3c;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.admin-table-headin {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px;
+  border-bottom: 3px solid #e74c3c;
+}
+
+.admin-btn-primary {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.admin-btn-primary:hover {
+  background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+}
+
+.admin-header-search {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  border-radius: 25px;
+  padding: 10px 20px;
+}
+
+.admin-header-search::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.admin-logout-btn {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.admin-logout-btn:hover {
+  background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
+  transform: translateY(-2px);
+}

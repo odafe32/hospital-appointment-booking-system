@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/animations.css">  
     <link rel="stylesheet" href="css/main.css">  
+      <link href="assets/images/favicon/favicon.png" rel="icon">
     <link rel="stylesheet" href="css/signup.css">
         
     <title>Sign Up</title>
@@ -23,7 +24,8 @@ $_SESSION["user"]="";
 $_SESSION["usertype"]="";
 
 // Set the new timezone
-date_default_timezone_set('Asia/Kolkata');
+date_default_timezone_set('Africa/Lagos');
+
 $date = date('Y-m-d');
 
 $_SESSION["date"]=$date;
@@ -89,12 +91,12 @@ if($_POST){
             </tr>
             <tr>
                 <td class="label-td" colspan="2">
-                    <label for="nic" class="form-label">Staff No: </label>
+                    <label for="nic" class="form-label">Patient No: </label>
                 </td>
             </tr>
             <tr>
                 <td class="label-td" colspan="2">
-                    <input type="text" name="nic" class="input-text" placeholder="Staff Number" required>
+                    <input type="text" name="nic" class="input-text" placeholder="Patient Number" required>
                 </td>
             </tr>
             <tr>

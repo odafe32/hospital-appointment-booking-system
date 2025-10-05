@@ -1,0 +1,226 @@
+/* Patient Dashboard Specific Styles */
+@import url('font-inter.css');
+
+:root {
+  --primarycolor: #27ae60;
+  --primarycolorhover: #2ecc71;
+  --btnice: #d5f4e6;
+  --btnnicetext: #27ae60;
+  --accentcolor: #e74c3c;
+  --successcolor: #27ae60;
+  --warningcolor: #f39c12;
+  --bgcolor: #f8f9fa;
+}
+
+.patient-container {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e8f5e8 100%);
+  min-height: 100vh;
+}
+
+.patient-menu {
+  background: rgba(39, 174, 96, 0.95);
+  border-right: 3px solid #3498db;
+  backdrop-filter: blur(10px);
+}
+
+.patient-profile-container {
+  background: rgba(52, 152, 219, 0.1);
+  border-bottom: 2px solid #3498db;
+}
+
+.patient-profile-title {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.patient-profile-subtitle {
+  color: #7f8c8d;
+}
+
+.patient-menu-btn {
+  color: #2c3e50;
+  background-position: 30% 50%;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.patient-menu-btn:hover {
+  background-color: rgba(52, 152, 219, 0.2);
+  color: #3498db;
+  border-left-color: #3498db;
+  transform: translateX(5px);
+}
+
+.patient-menu-active {
+  color: #3498db;
+  border-left: 4px solid #3498db;
+  background-color: rgba(52, 152, 219, 0.15);
+}
+
+.patient-dash-body {
+  background: white;
+}
+
+.patient-nav-bar {
+  background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.patient-dashboard-items {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 2px solid #27ae60;
+  border-radius: 12px;
+  color: #2c3e50;
+  box-shadow: 0 4px 15px rgba(39, 174, 96, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.patient-dashboard-items:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(39, 174, 96, 0.15);
+}
+
+.patient-h1-dashboard {
+  font-size: 30px;
+  font-weight: 700;
+  color: #27ae60;
+  margin: 0;
+  padding: 0;
+}
+
+.patient-h3-dashboard {
+  font-size: 18px;
+  font-weight: 500;
+  color: #7f8c8d;
+  margin: 0;
+  padding: 0;
+}
+
+.patient-dashboard-icons {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin-left: 50px;
+  margin-right: 0px;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.patient-table-header {
+  background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.patient-filter-container {
+  background: white;
+  border: 2px solid #27ae60;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(39, 174, 96, 0.1);
+}
+
+.patient-sub-table {
+  border: 2px solid #27ae60;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.patient-table-headin {
+  background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px;
+  border-bottom: 3px solid #3498db;
+}
+
+.patient-btn-primary {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.patient-btn-primary:hover {
+  background: linear-gradient(135deg, #2980b9 0%, #21618c 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.patient-header-search {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  border-radius: 25px;
+  padding: 10px 20px;
+}
+
+.patient-header-search::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.patient-logout-btn {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.patient-logout-btn:hover {
+  background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
+  transform: translateY(-2px);
+}
+
+.patient-welcome-header {
+  background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.patient-welcome-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.patient-welcome-subtitle {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.patient-booking-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e8f5e8 100%);
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  border: 2px solid #27ae60;
+}
+
+.patient-booking-form {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(39, 174, 96, 0.1);
+  border-left: 5px solid #27ae60;
+}

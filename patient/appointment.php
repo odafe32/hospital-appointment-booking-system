@@ -95,28 +95,28 @@
                     </td>
                 </tr>
                 <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-home" >
+                    <td class="menu-btn  -home" >
                         <a href="index.php" class="non-style-link-menu "><div><p class="menu-text">Home</p></a></div></a>
                     </td>
                 </tr>
                 <tr class="menu-row">
-                    <td class="menu-btn menu-icon-doctor">
+                    <td class="menu-btn  -doctor">
                         <a href="doctors.php" class="non-style-link-menu"><div><p class="menu-text">All Doctors</p></a></div>
                     </td>
                 </tr>
                 
                 <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-session">
+                    <td class="menu-btn  -session">
                         <a href="schedule.php" class="non-style-link-menu"><div><p class="menu-text">Scheduled Sessions</p></div></a>
                     </td>
                 </tr>
                 <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-appoinment  menu-active menu-icon-appoinment-active">
+                    <td class="menu-btn  -appoinment  menu-active  -appoinment-active">
                         <a href="appointment.php" class="non-style-link-menu non-style-link-menu-active"><div><p class="menu-text">My Bookings</p></a></div>
                     </td>
                 </tr>
                 <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-settings">
+                    <td class="menu-btn  -settings">
                         <a href="settings.php" class="non-style-link-menu"><div><p class="menu-text">Settings</p></a></div>
                     </td>
                 </tr>
@@ -127,7 +127,7 @@
             <table border="0" width="100%" style=" border-spacing: 0;margin:0;padding:0;margin-top:25px; ">
                 <tr >
                     <td width="13%" >
-                    <a href="appointment.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Back</font></button></a>
+                    <a href="appointment.php" ><button  class="login-btn btn-primary-soft btn    "  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px; background-color:darkred; color: white;"><font class="tn-in-text">Back</font></button></a>
                     </td>
                     <td>
                         <p style="font-size: 23px;padding-left:12px;font-weight: 600;">My Bookings history</p>
@@ -140,7 +140,8 @@
                         <p class="heading-sub12" style="padding: 0;margin: 0;">
                             <?php 
 
-                        date_default_timezone_set('Asia/Kolkata');
+                        date_default_timezone_set('Africa/Lagos');
+
 
                         $today = date('Y-m-d');
                         echo $today;
@@ -191,7 +192,7 @@
                         </td>
                         
                     <td width="12%">
-                        <input type="submit"  name="filter" value=" Filter" class=" btn-primary-soft btn button-icon btn-filter"  style="padding: 15px; margin :0;width:100%">
+                        <input type="submit"  name="filter" value=" Filter" class=" btn-primary-soft btn "  style="padding: 15px; margin :0;width:100%; background-color:darkred; color: white;">
                         </form>
                     </td>
 
@@ -376,6 +377,26 @@
             </div>
             </div>
             ';
+        }elseif($action=='cancelled'){
+            echo '
+            <div id="popup1" class="overlay">
+                    <div class="popup">
+                    <center>
+                    <br><br>
+                        <h2>Appointment Cancelled</h2>
+                        <a class="close" href="appointment.php">&times;</a>
+                        <div class="content">
+                        Your appointment has been cancelled successfully.<br><br>
+                        </div>
+                        <div style="display: flex;justify-content: center;">
+                        
+                        <a href="appointment.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;OK&nbsp;&nbsp;</font></button></a>
+                        <br><br><br><br>
+                        </div>
+                    </center>
+            </div>
+            </div>
+            ';
         }elseif($action=='drop'){
             $title=$_GET["title"];
             $docname=$_GET["doc"];
@@ -384,23 +405,34 @@
             <div id="popup1" class="overlay">
                     <div class="popup">
                     <center>
-                        <h2>Are you sure?</h2>
+                        <h2>Cancel Appointment</h2>
                         <a class="close" href="appointment.php">&times;</a>
                         <div class="content">
-                            You want to Cancel this Appointment?<br><br>
+                            Please provide a reason for cancelling this appointment. No payment is required to cancel.<br><br>
                             Session Name: &nbsp;<b>'.substr($title,0,40).'</b><br>
                             Doctor name&nbsp; : <b>'.substr($docname,0,40).'</b><br><br>
-                            
                         </div>
                         <div style="display: flex;justify-content: center;">
-                        <a href="delete-appointment.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;Yes&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
-                        <a href="appointment.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;No&nbsp;&nbsp;</font></button></a>
-
+                            <form action="delete-appointment.php" method="post" style="width:80%;">
+                                <input type="hidden" name="id" value="'.$id.'">
+                                <label for="reason" class="form-label" style="display:block;text-align:left;font-weight:500;margin-bottom:8px;">Reason for cancellation</label>
+                                <textarea id="reason" name="reason" class="input-text" style="width:100%;min-height:100px;resize:vertical;" placeholder="e.g., Not feeling well, schedule conflict, etc." required></textarea>
+                                <div style="display:flex;justify-content:center;margin-top:15px;gap:10px;">
+                                    <button type="submit" class="btn-primary btn" style="display:flex;justify-content:center;align-items:center;margin:10px;padding:10px;">
+                                        <font class="tn-in-text">&nbsp;Submit Cancellation&nbsp;</font>
+                                    </button>
+                                    <a href="appointment.php" class="non-style-link">
+                                        <button type="button" class="btn-primary btn" style="display:flex;justify-content:center;align-items:center;margin:10px;padding:10px;">
+                                            <font class="tn-in-text">&nbsp;&nbsp;Keep Booking&nbsp;&nbsp;</font>
+                                        </button>
+                                    </a>
+                                </div>
+                            </form>
                         </div>
                     </center>
             </div>
             </div>
-            '; 
+            ';
         }elseif($action=='view'){
             $sqlmain= "select * from doctor where docid='$id'";
             $result= $database->query($sqlmain);

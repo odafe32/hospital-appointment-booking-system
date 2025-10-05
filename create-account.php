@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/animations.css">  
     <link rel="stylesheet" href="css/main.css">  
     <link rel="stylesheet" href="css/signup.css">
+      <link href="assets/images/favicon/favicon.png" rel="icon">
         
     <title>Create Account</title>
     <style>
@@ -27,7 +28,8 @@ $_SESSION["user"]="";
 $_SESSION["usertype"]="";
 
 // Set the new timezone
-date_default_timezone_set('Asia/Kolkata');
+date_default_timezone_set('Africa/Lagos');
+
 $date = date('Y-m-d');
 
 $_SESSION["date"]=$date;
@@ -116,7 +118,7 @@ if($_POST){
             </tr>
             <tr>
                 <td class="label-td" colspan="2">
-                    <input type="tel" name="tele" class="input-text"  placeholder="ex: 0712345678" pattern="[0]{1}[0-9]{9}" >
+                    <input type="tel" name="tele" class="input-text"  placeholder="ex: 0712345678"  >
                 </td>
             </tr>
             <tr>

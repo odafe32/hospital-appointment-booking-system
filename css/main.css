@@ -1,9 +1,9 @@
 @import url('font-inter.css');
 :root {
-  --primarycolor: #0A76D8;
-  --primarycolorhover: #006dd3;
+  --primarycolor: #800000;
+  --primarycolorhover: #800000;
   --btnice:#D8EBFA;
-  --btnnicetext:#1b62b3;
+  --btnnicetext:#800000;
 }
 
 body{
@@ -81,7 +81,7 @@ body{
 }
 
 .input-text:focus{
-    border: 1px solid rgb(10,118,216);
+    border: 1px solid #800000;
     transition: 0.2s;
 }
 
@@ -223,7 +223,7 @@ body{
   }
   
   .popup {
-    margin: 70px auto;
+    margin: 30px auto;
     padding: 20px;
     background: #fff;
     border-radius: 5px;
@@ -365,75 +365,75 @@ input[type=search]:focus {
 
 
 
-.menu-icon-dashbord{
+. -dashbord{
   background-image: url('../img/icons/dashboard.svg');
 }
 
 
-.menu-icon-doctor{
+. -doctor{
   background-image: url('../img/icons/doctors.svg');
 }
-.menu-icon-schedule{
+. -schedule{
   background-image: url('../img/icons/schedule.svg');
 }
-.menu-icon-appoinment{
+. -appoinment{
   background-image: url('../img/icons/book.svg');
 }
-.menu-icon-patient{
+. -patient{
   background-image: url('../img/icons/patients.svg');
 }
-.menu-icon-settings{
+. -settings{
   background-image: url('../img/icons/settings.svg');
 }
 
-.menu-icon-session{
+. -session{
   background-image: url('../img/icons/session.svg');
 }
-.menu-icon-home{
+. -home{
   background-image: url('../img/icons/home.svg');
 }
 
 
 
-.menu-icon-dashbord:hover,.menu-icon-dashbord-active{
+. -dashbord:hover,. -dashbord-active{
   color: var(--primarycolor);
 
   background-image: url('../img/icons/dashboard-hover.svg');
 }
 
 
-.menu-icon-doctor:hover,.menu-icon-doctor-active{
+. -doctor:hover,. -doctor-active{
   color: var(--primarycolor);
   background-image: url('../img/icons/doctors-hover.svg');
 }
-.menu-icon-schedule:hover,.menu-icon-schedule-active{
+. -schedule:hover,. -schedule-active{
   color: var(--primarycolor);
   
   background-image: url('../img/icons/schedule-hover.svg');
 }
-.menu-icon-appoinment:hover,.menu-icon-appoinment-active{
+. -appoinment:hover,. -appoinment-active{
   color: var(--primarycolor);
   
   background-image: url('../img/icons/book-hover.svg');
 }
-.menu-icon-patient:hover,.menu-icon-patient-active{
+. -patient:hover,. -patient-active{
   color: var(--primarycolor);
   
   background-image: url('../img/icons/patients-hover.svg');
 }
 
-.menu-icon-settings:hover,.menu-icon-settings-active{
+. -settings:hover,. -settings-active{
   color: var(--primarycolor);
   
   background-image: url('../img/icons/settings-iceblue.svg');
 }
 
-.menu-icon-session:hover,.menu-icon-session-active{
+. -session:hover,. -session-active{
   color: var(--primarycolor);
   
   background-image: url('../img/icons/session-iceblue.svg');
 }
-.menu-icon-home:hover,.menu-icon-home-active{
+. -home:hover,. -home-active{
   color: var(--primarycolor);
   
   background-image: url('../img/icons/home-iceblue.svg');
@@ -443,7 +443,7 @@ input[type=search]:focus {
 
 
 
-.btn-icon-back{
+.   {
   background-image: url('../img/icons/back-iceblue.svg');
   background-position: 18px 50%;
   background-repeat: no-repeat;
@@ -451,7 +451,7 @@ input[type=search]:focus {
   padding: 8px 20px 8px 40px;
 }
 
-.btn-icon-back:hover{
+.   :hover{
   background-image: url('../img/icons/back-white.svg');
 }
 
@@ -539,7 +539,7 @@ input[type=search]:focus {
 }
 
 
-.doctor-header{
+.  {
   background-image: url(../img/b8.jpg);
   color: rgba(0, 0, 0, 0.87);
   background-size: 100%;

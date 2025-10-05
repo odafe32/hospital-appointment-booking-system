@@ -134,23 +134,51 @@ CREATE TABLE IF NOT EXISTS `schedule` (
   `scheduledate` date DEFAULT NULL,
   `scheduletime` time DEFAULT NULL,
   `nop` int(4) DEFAULT NULL,
+  `status` enum('active','cancelled','completed') DEFAULT 'active',
+  `cancellation_reason` text DEFAULT NULL,
+  `cancelled_at` timestamp NULL DEFAULT NULL,
+  `cancelled_by` int(11) DEFAULT NULL,
   PRIMARY KEY (`scheduleid`),
-  KEY `docid` (`docid`)
+  KEY `docid` (`docid`),
+  KEY `status` (`status`)
 ) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `schedule`
 --
 
-INSERT INTO `schedule` (`scheduleid`, `docid`, `title`, `scheduledate`, `scheduletime`, `nop`) VALUES
-(1, '1', 'Test Session', '2050-01-01', '18:00:00', 50),
-(2, '1', '1', '2022-06-10', '20:36:00', 1),
-(3, '1', '12', '2022-06-10', '20:33:00', 1),
-(4, '1', '1', '2022-06-10', '12:32:00', 1),
-(5, '1', '1', '2022-06-10', '20:35:00', 1),
-(6, '1', '12', '2022-06-10', '20:35:00', 1),
-(7, '1', '1', '2022-06-24', '20:36:00', 1),
-(8, '1', '12', '2022-06-10', '13:33:00', 1);
+INSERT INTO `schedule` (`scheduleid`, `docid`, `title`, `scheduledate`, `scheduletime`, `nop`, `status`) VALUES
+(1, '1', 'Test Session', '2050-01-01', '18:00:00', 50, 'active'),
+(2, '1', '1', '2022-06-10', '20:36:00', 1, 'active'),
+(3, '1', '12', '2022-06-10', '20:33:00', 1, 'active'),
+(4, '1', '1', '2022-06-10', '12:32:00', 1, 'active'),
+(5, '1', '1', '2022-06-10', '20:35:00', 1, 'active'),
+(6, '1', '12', '2022-06-10', '20:35:00', 1, 'active'),
+(7, '1', '1', '2022-06-24', '20:36:00', 1, 'active'),
+(8, '1', '12', '2022-06-10', '13:33:00', 1, 'active');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `session_cancellations`
+--
+
+DROP TABLE IF EXISTS `session_cancellations`;
+CREATE TABLE IF NOT EXISTS `session_cancellations` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `scheduleid` int(11) NOT NULL,
+  `cancelled_by` int(11) NOT NULL,
+  `cancellation_reason` text NOT NULL,
+  `cancelled_at` timestamp DEFAULT CURRENT_TIMESTAMP,
+  `original_date` date NOT NULL,
+  `original_time` time NOT NULL,
+  `doctor_id` int(11) NOT NULL,
+  `session_title` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `scheduleid` (`scheduleid`),
+  KEY `cancelled_by` (`cancelled_by`),
+  KEY `cancelled_at` (`cancelled_at`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
