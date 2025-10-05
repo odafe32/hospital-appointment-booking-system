@@ -191,7 +191,7 @@ edoc-doctor-appointment-system-main/
 ## 📞 Support & Documentation
 
 For technical support, feature requests, or contributions:
-- 📧 **Email**: support@edoc-system.com
+- 📧 **Email**: godfreyj.sule1@gmail.com
 - 📖 **Documentation**: [System Guide](docs/)
 - 🐛 **Issues**: [GitHub Issues](https://github.com/odafe32/Hospital-appointment-system-/issues)
 - 💬 **Discussions**: [GitHub Discussions](https://github.com/odafe32/Hospital-appointment-system-/discussions)
